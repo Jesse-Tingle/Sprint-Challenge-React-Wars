@@ -1,17 +1,17 @@
 import React from 'react';
 import '../App.css';
-
+import { ContainerDiv, StyledName, StyledH2 } from './styles';
 
 function CharacterCard(props) {
     console.log('Character Props', props);
 
     return (
-        <div>
-            <h1>Name: { props.name }</h1>
-            <h2>Birth Year: { props.birthDate } </h2>
-            <h2>Gender: { props.gender } </h2>
-            <h2>Height: { props.height} </h2>
-        </div>
+        <ContainerDiv>
+            <StyledName>Name: { props.name }</StyledName>
+            <StyledH2>Birth Year: { props.birthDate } </StyledH2>
+            <StyledH2>Gender: { props.gender } </StyledH2>
+            <StyledH2>Height: { props.height} </StyledH2>
+        </ContainerDiv>
     )
 }
 
