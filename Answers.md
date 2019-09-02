@@ -13,9 +13,11 @@
 &nbsp; &nbsp; - With the example below you use the useState hook to set the state to an empty array. Then in the axios call you use setData to set the state to the array you are passing in from the api. At the end of the useEffect hook call you also place another empty array so that the api call is only run again if the state changes. 
 
 Example: 
-
+```
 const [data, setData] = useState([]);
+```
 
+```
 useEffect(() => {
     axios
       .get(`https://swapi.co/api/people/`)
@@ -27,7 +29,7 @@ useEffect(() => {
         console.log(err);
       })
   }, [])
-
+```
 
 ### 4. Describe props.
 &nbsp; &nbsp; - Props are used to pass data from a parent component to a child component
@@ -37,6 +39,7 @@ useEffect(() => {
 
 &nbsp; &nbsp; - A side effect is anything that effects something outside the scope of the function being executed. 
 
+```
 useEffect(() => {
     axios
       .get(`https://swapi.co/api/people/`)
@@ -48,5 +51,6 @@ useEffect(() => {
         console.log(err);
       })
   }, [])
+```
 
 &nbsp; &nbsp; - Putting the empty array at the end of this useEffect function(example above) prevents an infinite loop from running. This empty array allows the api call to only run when the data inside the array has changed. You can also place a variable inside the array. Placing a variable there will allow you to "subscribe" to that variable and the function will only run when the data associated with that variable has changed.
