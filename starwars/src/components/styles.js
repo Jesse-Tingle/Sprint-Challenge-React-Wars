@@ -14,10 +14,11 @@ export const ContainerDiv = styled.div`
     margin-bottom: 25px;
     margin-right: 45px;
     border-radius: 30px;
-`;
 
-export const StyledName = styled.h1`
-    font-family: ${RussoFamily}, sans-serif;
+    h1 {
+        font-family: ${RussoFamily}, sans-serif;
+    }
+
 `;
 
 export const StyledH2 = styled.h2`
